@@ -1,19 +1,14 @@
-// Create new router object
+
 const router = require('express').Router();
-
-//add new route "routesnotes"
-const routesnotes = require('../routesnotes')
-
-router.use(routesnotes);
-
-
-router.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './11-Express/02-Challenge/Develop/db/db.json'));
+const notesDb = require('../../db/db.json');
+router.get('/notes', (req, res) => {
+   console.log('I hit this route');
+   res.json(notesDb);
 });
 
 // make call to homepage
-router.post('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './11-Express/02-Challenge/Develop/db/db.json'));
+router.post('/notes', (req, res) => {
+   
 });
 //export router
 module.exports = router;

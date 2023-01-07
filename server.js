@@ -8,7 +8,7 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 //define api route
-const apiRoutes = require("./routes/apiroutes/apinotes");
+const apiRoutes = require("./routes/apiroutes");
 
 //define html route
 const htmlRoutes = require("./routes/htmlroutes/htmlnotes");
