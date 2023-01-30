@@ -1,6 +1,4 @@
-//
 const router = require('express').Router();
-
 
 //create a new note
 const {
